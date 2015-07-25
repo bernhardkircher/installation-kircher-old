@@ -1,0 +1,8 @@
+AuthUserFile /home/insmrnqm/www.installation-kircher.at/statistik/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Passwortgeschuetzter Bereich!"
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>
+

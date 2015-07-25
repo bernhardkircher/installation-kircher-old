@@ -1,0 +1,160 @@
+<html>
+
+<head>
+<title>Kontakt</title>
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+</head>
+
+<body bgcolor="#EAEAFB" style="margin-left: 0; margin-top: 5" text="#000000" link="#000000" vlink="#000000" alink="#000000" topmargin="5" leftmargin="0">
+
+<!--webbot BOT="GeneratedScript" PREVIEW=" " startspan --><script Language="JavaScript"><!--
+function FrontPage_Form1_Validator(theForm)
+{
+
+  if (theForm.Name.value == "")
+  {
+    alert("Please enter a value for the \"Name\" field.");
+    theForm.Name.focus();
+    return (false);
+  }
+
+  if (theForm.Strasse.value == "")
+  {
+    alert("Please enter a value for the \"Strasse\" field.");
+    theForm.Strasse.focus();
+    return (false);
+  }
+
+  if (theForm.PLZ.value == "")
+  {
+    alert("Please enter a value for the \"PLZ\" field.");
+    theForm.PLZ.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-";
+  var checkStr = theForm.PLZ.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"PLZ\" field.");
+    theForm.PLZ.focus();
+    return (false);
+  }
+
+  if (theForm.Ort.value == "")
+  {
+    alert("Please enter a value for the \"Ort\" field.");
+    theForm.Ort.focus();
+    return (false);
+  }
+
+  var checkOK = "0123456789-";
+  var checkStr = theForm.Telefon.value;
+  var allValid = true;
+  var decPoints = 0;
+  var allNum = "";
+  for (i = 0;  i < checkStr.length;  i++)
+  {
+    ch = checkStr.charAt(i);
+    for (j = 0;  j < checkOK.length;  j++)
+      if (ch == checkOK.charAt(j))
+        break;
+    if (j == checkOK.length)
+    {
+      allValid = false;
+      break;
+    }
+    allNum += ch;
+  }
+  if (!allValid)
+  {
+    alert("Please enter only digit characters in the \"Telefon\" field.");
+    theForm.Telefon.focus();
+    return (false);
+  }
+  return (true);
+}
+//--></script><!--webbot BOT="GeneratedScript" endspan --><form method="POST" target="kont-main" action="_vti_bin/shtml.exe/kont_form.htm" onsubmit="return FrontPage_Form1_Validator(this)" name="FrontPage_Form1" webbot-action="--WEBBOT-SELF--">
+  <!--webbot bot="SaveResults" startspan S-Email-Format="HTML/PRE"
+  B-Email-Label-Fields="TRUE" B-Email-Subject-From-Field="FALSE"
+  S-Email-Subject="Anfrage" S-Builtin-Fields="REMOTE_NAME"
+  S-Form-Fields="Name Strasse PLZ Ort Telefon Fax E_Mail Bad-Badsanierung Heizung-Heizungssanierung Reparatur von Reparaturen Anmerkung Kontakt_per "
+  U-Confirmation-Url="kont_conf.htm" S-Email-Address="kircher.brunner@utanet.at" --><input TYPE="hidden" NAME="VTI-GROUP" VALUE="0"><!--webbot
+  bot="SaveResults" endspan i-checksum="43374" --><div align="left"><table border="0" cellpadding="0" cellspacing="0" width="580">
+    <tr>
+      <td><div align="center"><center><table border="0" cellpadding="2" width="570" cellspacing="0">
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><font face="Arial" size="2"><strong> Name<br>
+          </strong></font><!--webbot bot="Validation" S-Display-Name="Name"
+            B-Value-Required="TRUE" --><input type="text" name="Name" size="35"></td>
+          <td width="280" rowspan="3" bgcolor="#CBCBF5"><font face="Arial" size="2"><strong>Ich
+          hätte gerne nähere Infos über:<br>
+          <input type="checkbox" name="Bad-Badsanierung" value="Bitte um Info">Bäder
+            / Badsanierung<br>
+          <input type="checkbox" name="Heizung-Heizungssanierung" value="Bitte um Info">Heizung
+            / Heizungssanierung<br>
+          <input type="checkbox" name="Reparatur von" value="Bitte um Info">Reparatur
+            von:<br>
+            <input type="text" name="Reparaturen" size="30"></strong></font></td>
+        </tr>
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><font face="Arial" size="2"><strong>Strasse<br>
+          </strong></font><!--webbot bot="Validation" S-Display-Name="Strasse"
+            B-Value-Required="TRUE" --><input type="text" name="Strasse" size="35"></td>
+        </tr>
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><font face="Arial" size="2"><strong>PLZ / Ort<br>
+          </strong></font><!--webbot bot="Validation" S-Display-Name="PLZ"
+            S-Data-Type="Integer" S-Number-Separators="x"
+            B-Value-Required="TRUE" --><input type="text" name="PLZ" size="6"><!--webbot
+            bot="Validation" S-Display-Name="Ort" B-Value-Required="TRUE" --><input type="text" name="Ort" size="27"></td>
+        </tr>
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><font face="Arial" size="2"><strong>Telefon / Fax<br>
+          </strong></font><!--webbot bot="Validation" S-Data-Type="Integer"
+            S-Number-Separators="x" --><input type="text" name="Telefon" size="16"><input type="text" name="Fax" size="17"></td>
+          <td width="280" bgcolor="#CBCBF5" rowspan="4"><font face="Arial" size="2"><strong>Raum
+          für Anmerkungen:<br>
+          <textarea rows="7" name="Anmerkung" cols="25"></textarea></strong></font></td>
+        </tr>
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><font face="Arial" size="2"><strong>E-Mail<br>
+          </strong></font><input type="text" name="E_Mail" size="35"></td>
+        </tr>
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><font face="Arial" size="2"><strong>Kontakt
+            erbeten per: <select name="Kontakt_per" size="1">
+            <option selected value="E-Mail">E-Mail</option>
+            <option value="Telefon">Telefon</option>
+            <option value="Fax">Fax</option>
+            <option value="Post">Post</option>
+          </select></strong></font></td>
+        </tr>
+        <tr>
+          <td width="290" bgcolor="#CBCBF5" height="40"><input type="submit" value="Anfrage senden" style="background-color: #DA565D; color: #FFFFFF; font-family: Verdana, Arial, Helvetica; font-size: 10pt; font-weight: bold">&nbsp;
+            <input type="reset" value="Löschen" style="background-color: #DA565D; color: #FFFFFF; font-family: Verdana, Arial, Helvetica; font-size: 10pt; font-weight: bold"></td>
+        </tr>
+      </table>
+      </center></div></td>
+    </tr>
+  </table>
+  </div>
+</form>
+</body>
+</html>
